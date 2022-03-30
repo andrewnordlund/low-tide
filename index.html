@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1" name="viewport">
+		<title>Low Tide Bookmarklet</title>
+	</head>
+	<body>
+		<header>
+			<h1>Low Tide Bookmarklet</h1>
+		</header>
+		<main>
+			<h2>What Is It?</h2>
+			<p>When you run the <a href="https://wave.webaim.org/extension/">WAVE extension</a> on a page, all this stuff gets added.  The only way to get rid of it is to refresh the page.  This makes the <a href="https://wave.webaim.org/extension/">WAVE extension</a> a pain to use on Single Page Apps.</p>
+			<p>The <a href="javascript:(function(){var n=32;var end=8365;key();function key(){console.log(n+': '+String.fromCharCode(n));e=document.createEvent('Event');e.initEvent('keydown', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keypress', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keyup', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e); n++; if(n<end){if(n==127) n=161; if(n==192) n=8364; x=window.setTimeout(key, 20);}}})();">Low Tide</a> bookmarklet cleans all that up, setting the page back to the way it was before you ran the <a href="https://wave.webaim.org/extension/">WAVE extension</a>.</p>
+			<p>Unfortunately, one thing it doesn't do is reset the <em>status</em> of the <a href="https://wave.webaim.org/extension/">WAVE extension</a>.  Once you run it, the icon changes colour and a flag gets set as being run.  If you try to run it again, the page refreshes.  So you're kinda screwed if you run it, then run Low Tide, then need to run WAVE again.</p>
+		</main>
+	</body>
+</html>
